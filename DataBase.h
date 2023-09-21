@@ -5,6 +5,12 @@
 #include <iostream>
 using std::string;
 
+enum atomNum 
+{
+	MIN = 1,
+	MAX = 18
+};
+
 const float arrAtomMass[]{ 1.00797f, 4.00260f, 6.941f, 6.941f, 9.01218f, 10.81f, 12.011f, 14.0067f,
 15.9994f, 18.998403f, 20.179f, 22.98977f, 24.305f, 26.98154f };
 

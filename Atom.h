@@ -10,15 +10,21 @@ private:
 	string _atomSymbol;
 	string _atomName;
 	short _atomNumber;
+	short _atomEnergyLevel;
 	float _atomMass;
 
-public:
-	Atom() : _atomSymbol{}, _atomName{}, _atomNumber{}, _atomMass{}
-	{ }
-	Atom(short atomNumber) {
+	short initEnergyLevel(short atomNumber);
 
-		if (atomNumber >= 1 && atomNumber <= 18) {
+public:
+	Atom() : _atomSymbol{}, _atomName{}, _atomNumber{}, _atomEnergyLevel{}, _atomMass {}
+	{ }
+
+	Atom(short atomNumber)
+	{
+
+		if (atomNumber >= MIN && atomNumber <= MAX) {
 			_atomNumber = atomNumber;
+			_atomEnergyLevel = initEnergyLevel(atomNumber);
 
 			atomNumber--;
 			_atomSymbol = arrAtomName[atomNumber][0];
@@ -28,6 +34,7 @@ public:
 		else
 			Atom();
 	}
+
 }
 ;
 #endif
