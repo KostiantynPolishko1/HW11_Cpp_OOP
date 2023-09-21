@@ -4,7 +4,8 @@
 int main(void)
 {
     cout << "Atom!\n";
-    Atom atom(15);
+    Atom atom(13);
+    printAtomData(atom);
 
     return 0;
 }

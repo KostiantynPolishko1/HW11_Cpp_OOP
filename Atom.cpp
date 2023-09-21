@@ -1,5 +1,13 @@
 #include "Atom.h"
 
+short Atom::initEnergyLevel(short atomNumber)
+{
+    short size = sizeof(arrAtomPeriod) / sizeof(arrAtomPeriod[0]);
+    for (short i = 0; i < size; i++)
+        if (atomNumber >= arrAtomPeriod[i][0] && atomNumber <= arrAtomPeriod[i][1])
+            return ++i;
+}
+;
 short* Atom::initElectronLevel(short* _arrElectron, short _atomNumber, short _atomEnergyLevel)
 {
     _arrElectron = new short[_atomEnergyLevel];
@@ -34,11 +42,54 @@ short* Atom::initElectronLevel(short* _arrElectron, short _atomNumber, short _at
 
     return _arrElectron;
 }
+;
 
-short Atom::initEnergyLevel(short atomNumber)
+string Atom::getAtomSymbol()
 {
-	short size = sizeof(arrAtomPeriod) / sizeof(arrAtomPeriod[0]);
-	for (short i = 0; i < size; i++)
-		if (atomNumber >= arrAtomPeriod[i][0] && atomNumber <= arrAtomPeriod[i][1])
-			return ++i;
+    return _atomSymbol;
+}
+
+string Atom::getAtomName()
+{
+    return _atomName;
+}
+
+short Atom::getAtomNumber()
+{
+    return _atomNumber;
+}
+
+short Atom::getAtomNProton()
+{
+    return _atomNProton;
+}
+
+short Atom::getAtomNNeitron()
+{
+    return _atomNNeitron;
+}
+
+ short Atom::getAtomNElectron()
+{
+    return _atomNElectron;
+}
+
+ short Atom::getAtomEnergyLevel()
+{
+    return _atomEnergyLevel;
+}
+
+ float Atom::getAtomMass()
+{
+    return _atomMass;
+}
+
+ short* Atom::getArrElectron()
+{
+    return _arrElectron;
+}
+
+ void Atom::setAtomNNeitron(short atomNNeitron)
+{
+    _atomNNeitron = atomNNeitron;
 }
