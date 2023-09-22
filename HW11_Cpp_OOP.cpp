@@ -5,13 +5,14 @@
 int main(void)
 {
     cout << "Atom!\n";
-    Atom atom;
+
+    Atom atom; //default constructor call
     printAtomData(atom);
 
     short atomNumber = inputSize("Atom", MIN, MAX);
 
-    Atom atom(atomNumber);
-    printAtomData(atom);
+    Atom atom2(atomNumber);
+    printAtomData(atom2);
 
     return 0;
 }
