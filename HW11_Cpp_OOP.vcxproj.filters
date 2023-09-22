@@ -32,5 +32,8 @@
     <ClInclude Include="PrintModule.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="InputModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
